@@ -268,3 +268,5 @@ php artisan test
 ## 9. Batasan Sistem (Known Limitations)
 - Transaksi pembayaran saat ini menggunakan mekanisme simulasi (*Cash on Delivery* / Transfer Manual), belum terintegrasi dengan Payment Gateway pihak ketiga (Midtrans/Xendit).
 - Aplikasi dirancang untuk single warehouse (satu gudang terpusat).
+#   i n v e n t o r y - s a l e s - j u a l - k a m e r a  
+ 
