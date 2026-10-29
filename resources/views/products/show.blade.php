@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-3">
     <div>
-        <h4 class="fw-bold text-white mb-0"><i class="bi bi-camera me-2 text-danger"></i>{{ $product->name }}</h4>
+        <h4 class="fw-bold text-dark mb-0"><i class="bi bi-camera me-2 text-danger"></i>{{ $product->name }}</h4>
         <span class="badge bg-dark border border-secondary-subtle text-info font-monospace">{{ $product->sku }}</span>
         <span class="badge bg-secondary ms-1">{{ $product->category->name ?? '-' }}</span>
     </div>
@@ -28,7 +28,7 @@
             </div>
             @endif
             <div class="card-body">
-                <h5 class="fw-bold text-white mb-2">{{ $product->name }}</h5>
+                <h5 class="fw-bold text-dark mb-2">{{ $product->name }}</h5>
                 <p class="text-muted small mb-3">{{ $product->description ?? 'Tidak ada deskripsi spesifikasi.' }}</p>
 
                 <div class="list-group list-group-flush bg-transparent">

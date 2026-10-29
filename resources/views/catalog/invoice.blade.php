@@ -7,14 +7,14 @@
     <div class="col-lg-8">
         <div class="text-center mb-4">
             <div class="display-5 text-success mb-2"><i class="bi bi-check-circle-fill"></i></div>
-            <h3 class="fw-bold text-white mb-1">Terima Kasih Atas Pesanan Anda!</h3>
+            <h3 class="fw-bold text-dark mb-1">Terima Kasih Atas Pesanan Anda!</h3>
             <p class="text-muted">Pesanan kamera Anda telah berhasil diproses oleh sistem CameraStore.</p>
         </div>
 
         <div class="card border-0 shadow-lg" >
             <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center p-4 pb-0">
                 <div>
-                    <h5 class="fw-bold text-white mb-0">📷 CameraStore Indonesia</h5>
+                    <h5 class="fw-bold text-dark mb-0">📷 CameraStore Indonesia</h5>
                     <span class="text-muted small">Faktur Pemesanan Resmi</span>
                 </div>
                 <div class="text-end">
@@ -30,7 +30,7 @@
                 <div class="row mb-4">
                     <div class="col-sm-6 mb-3 mb-sm-0">
                         <span class="text-muted small d-block">Tujuan Pengiriman / Pemesan:</span>
-                        <div class="fw-bold text-white">{{ $sale->customer->name ?? 'Pelanggan Umum' }}</div>
+                        <div class="fw-bold text-dark">{{ $sale->customer->name ?? 'Pelanggan Umum' }}</div>
                         <div class="text-muted small">{{ $sale->customer->phone ?? '' }}</div>
                         <div class="text-light small mt-1">{{ $sale->customer->address ?? '' }}</div>
                     </div>
@@ -56,7 +56,7 @@
                             @foreach($sale->saleItems as $item)
                             <tr >
                                 <td>
-                                    <div class="fw-semibold text-white">{{ $item->product->name ?? '-' }}</div>
+                                    <div class="fw-semibold text-dark">{{ $item->product->name ?? '-' }}</div>
                                     <span class="badge bg-dark border border-secondary-subtle text-muted small font-monospace">{{ $item->product->sku ?? '-' }}</span>
                                 </td>
                                 <td class="text-center fw-bold text-light font-monospace">{{ $item->quantity }} unit</td>
@@ -67,7 +67,7 @@
                         </tbody>
                         <tfoot class="table-light">
                             <tr>
-                                <td colspan="3" class="text-end fw-bold text-white fs-6">TOTAL PEMBAYARAN:</td>
+                                <td colspan="3" class="text-end fw-bold text-dark fs-6">TOTAL PEMBAYARAN:</td>
                                 <td class="text-end fw-bold text-success font-monospace fs-4">{{ $sale->formatted_total }}</td>
                             </tr>
                         </tfoot>

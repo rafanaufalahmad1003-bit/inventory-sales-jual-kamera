@@ -30,7 +30,7 @@
                     <span class="badge bg-dark border border-secondary-subtle text-info font-monospace">{{ $product->sku }}</span>
                 </div>
 
-                <h2 class="fw-bold text-white mb-2">{{ $product->name }}</h2>
+                <h2 class="fw-bold text-dark mb-2">{{ $product->name }}</h2>
 
                 <div class="mb-3">
                     <span class="text-muted small">Harga Penjualan:</span>
@@ -73,13 +73,13 @@
 </div>
 
 @if($relatedProducts->count() > 0)
-<h5 class="fw-bold text-white mb-3"><i class="bi bi-grid me-2 text-danger"></i>Kamera Terkait Lainnya</h5>
+<h5 class="fw-bold text-dark mb-3"><i class="bi bi-grid me-2 text-danger"></i>Kamera Terkait Lainnya</h5>
 <div class="row g-3">
     @foreach($relatedProducts as $rel)
     <div class="col-md-4">
         <div class="card h-100 border-0 shadow-sm" >
             <div class="card-body p-3">
-                <h6 class="fw-bold text-white mb-1">{{ $rel->name }}</h6>
+                <h6 class="fw-bold text-dark mb-1">{{ $rel->name }}</h6>
                 <div class="text-success fw-bold font-monospace small mb-2">{{ $rel->formatted_selling_price }}</div>
                 <a href="{{ route('catalog.show', $rel) }}" class="btn btn-sm btn-outline-info w-100">Lihat Kamera</a>
             </div>

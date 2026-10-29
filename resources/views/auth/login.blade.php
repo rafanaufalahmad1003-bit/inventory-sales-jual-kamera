@@ -162,24 +162,21 @@
             <!-- Quick Demo Login Helpers -->
             <div class="p-3 rounded-3 border bg-light mt-2">
                 <div class="text-secondary small fw-bold mb-2 text-uppercase" style="font-size:0.72rem; letter-spacing:0.5px;">
-                    <i class="bi bi-lightning-charge-fill text-warning me-1"></i>Klik Cepat Akun Demo (Password: password):
+                    <i class="bi bi-lightning-charge-fill text-warning me-1"></i>Pilih Role Demo (Password: password):
                 </div>
-                <div class="d-flex flex-wrap gap-1 mb-2">
+                <div class="d-flex flex-wrap gap-2">
                     <span class="badge bg-danger demo-badge p-2 shadow-sm" onclick="fillLogin('owner@camera.com')">
-                        <i class="bi bi-star-fill me-1"></i> Owner (Semua Akses)
+                        <i class="bi bi-star-fill me-1"></i> Owner
                     </span>
                     <span class="badge bg-primary demo-badge p-2 shadow-sm" onclick="fillLogin('admin@camera.com')">
-                        <i class="bi bi-shield me-1"></i> Admin (Stock In & Jual)
+                        <i class="bi bi-shield me-1"></i> Admin
                     </span>
                     <span class="badge bg-info-subtle text-info-emphasis border border-info demo-badge p-2 shadow-sm" onclick="fillLogin('staff@camera.com')">
-                        <i class="bi bi-person me-1"></i> Staff (Stock In & Jual)
+                        <i class="bi bi-person me-1"></i> Staff
                     </span>
                     <span class="badge bg-success demo-badge p-2 shadow-sm" onclick="fillLogin('pelanggan@camera.com')">
-                        <i class="bi bi-bag me-1"></i> Pelanggan (Pesan Kamera)
+                        <i class="bi bi-bag me-1"></i> Pelanggan
                     </span>
-                </div>
-                <div class="text-muted" style="font-size:0.73rem;">
-                    * <em>Admin & Staff</em>: memiliki izin sama (TIDAK BISA tambah/edit produk & supplier, hanya bisa Stock In & Penjualan). <em>Owner</em>: bisa semua data & batalkan transaksi.
                 </div>
             </div>
 

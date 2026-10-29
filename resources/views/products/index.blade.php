@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
     <div>
-        <h3 class="fw-bold text-white mb-0"><i class="bi bi-camera me-2 text-danger"></i>Master Produk Kamera</h3>
+        <h3 class="fw-bold text-dark mb-0"><i class="bi bi-camera me-2 text-danger"></i>Master Produk Kamera</h3>
         <p class="text-muted small mb-0">Daftar inventori kamera, lensa, dan aksesoris fotografi</p>
     </div>
     @if(auth()->user()->isOwner())
@@ -78,7 +78,7 @@
                     <tr >
                         <td class="text-muted">{{ $products->firstItem() + $index }}</td>
                         <td>
-                            <div class="fw-semibold text-white">{{ $product->name }}</div>
+                            <div class="fw-semibold text-dark">{{ $product->name }}</div>
                             <span class="badge bg-dark border border-secondary-subtle text-info font-monospace small">{{ $product->sku }}</span>
                         </td>
                         <td>

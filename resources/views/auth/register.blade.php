@@ -8,7 +8,7 @@
         <div class="card border-0 shadow-lg" >
             <div class="card-header bg-transparent text-center border-0 pt-4 pb-2">
                 <div class="display-6 text-danger mb-2">📷</div>
-                <h4 class="fw-bold text-white mb-1">Registrasi Akun Pelanggan</h4>
+                <h4 class="fw-bold text-dark mb-1">Registrasi Akun Pelanggan</h4>
                 <p class="text-muted small">Buat akun untuk memesan kamera & aksesoris fotografi</p>
             </div>
             <div class="card-body p-4">

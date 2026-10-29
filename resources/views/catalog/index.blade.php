@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Hero Banner -->
-<div class="p-4 p-md-5 mb-4 rounded-3 text-white shadow-sm position-relative overflow-hidden" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white !important;" class="text-white">
+<div class="p-4 p-md-5 mb-4 rounded-3 text-white shadow-sm position-relative overflow-hidden" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white !important;" class="text-dark">
     <div class="col-md-8 position-relative" style="z-index: 2;">
         <span class="badge bg-danger px-3 py-2 mb-2"><i class="bi bi-camera-fill me-1"></i> Toko Kamera & Aksesoris Fotografi</span>
         <h1 class="display-5 fw-bold mb-2">Beli Kamera Impian Anda</h1>
@@ -117,7 +117,7 @@
     @empty
     <div class="col-12 text-center py-5">
         <i class="bi bi-camera-slash display-4 text-muted d-block mb-3"></i>
-        <h4 class="text-white">Tidak ada kamera yang ditemukan</h4>
+        <h4 class="text-dark">Tidak ada kamera yang ditemukan</h4>
         <p class="text-muted">Coba kata kunci pencarian lain atau pilih kategori kamera lainnya.</p>
         <a href="{{ route('catalog.index') }}" class="btn btn-outline-danger">Reset Pencarian</a>
     </div>

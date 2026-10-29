@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
     <div>
-        <h3 class="fw-bold text-white mb-0"><i class="bi bi-people me-2 text-danger"></i>Data Pelanggan (Customer)</h3>
+        <h3 class="fw-bold text-dark mb-0"><i class="bi bi-people me-2 text-danger"></i>Data Pelanggan (Customer)</h3>
         <p class="text-muted small mb-0">Daftar pelanggan studio foto, rental, fotografer & pembeli kamera</p>
     </div>
     <a href="{{ route('customers.create') }}" class="btn btn-danger" style="background-color: var(--cs-accent); border:none;">
@@ -50,7 +50,7 @@
                     <tr >
                         <td class="text-muted">{{ $customers->firstItem() + $index }}</td>
                         <td>
-                            <div class="fw-semibold text-white">
+                            <div class="fw-semibold text-dark">
                                 <i class="bi bi-person-circle text-info me-1"></i>{{ $customer->name }}
                             </div>
                         </td>

@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
     <div>
-        <h3 class="fw-bold text-white mb-0"><i class="bi bi-cart-check me-2 text-success"></i>Transaksi Penjualan Kamera</h3>
+        <h3 class="fw-bold text-dark mb-0"><i class="bi bi-cart-check me-2 text-success"></i>Transaksi Penjualan Kamera</h3>
         <p class="text-muted small mb-0">Kelola riwayat order pelanggan & transaksi penjualan kamera di toko</p>
     </div>
     <a href="{{ route('sales.create') }}" class="btn btn-success">
@@ -68,7 +68,7 @@
                         </td>
                         <td>
                             @if($sale->customer)
-                                <div class="fw-semibold text-white">
+                                <div class="fw-semibold text-dark">
                                     <i class="bi bi-person me-1 text-info"></i>{{ $sale->customer->name }}
                                 </div>
                                 <span class="text-muted small">{{ $sale->customer->phone }}</span>

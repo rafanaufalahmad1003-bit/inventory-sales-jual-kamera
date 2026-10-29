@@ -7,7 +7,7 @@
     <div class="col-lg-10">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
-                <h4 class="fw-bold text-white mb-0"><i class="bi bi-box-arrow-in-down text-primary me-2"></i>Transaksi Pembelian Kamera (Stock In)</h4>
+                <h4 class="fw-bold text-dark mb-0"><i class="bi bi-box-arrow-in-down text-primary me-2"></i>Transaksi Pembelian Kamera (Stock In)</h4>
                 <p class="text-muted small mb-0">Menambah stok fisik kamera secara otomatis setelah transaksi berhasil disimpan</p>
             </div>
             <a href="{{ route('purchases.index') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i> Kembali</a>
@@ -19,7 +19,7 @@
             <!-- Header Card -->
             <div class="card border-0 shadow-sm mb-3" >
                 <div class="card-header bg-transparent border-0 pt-3">
-                    <h6 class="fw-bold text-white mb-0"><i class="bi bi-info-circle text-primary me-1"></i> Data Pemasok & Waktu Pembelian</h6>
+                    <h6 class="fw-bold text-dark mb-0"><i class="bi bi-info-circle text-primary me-1"></i> Data Pemasok & Waktu Pembelian</h6>
                 </div>
                 <div class="card-body p-4 pt-2">
                     <div class="row">
@@ -54,7 +54,7 @@
             <!-- Items Card -->
             <div class="card border-0 shadow-sm mb-3" >
                 <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 pb-2">
-                    <h6 class="fw-bold text-white mb-0"><i class="bi bi-cart-plus text-primary me-1"></i> Rincian Produk Kamera (Stock In)</h6>
+                    <h6 class="fw-bold text-dark mb-0"><i class="bi bi-cart-plus text-primary me-1"></i> Rincian Produk Kamera (Stock In)</h6>
                     <button type="button" class="btn btn-sm btn-outline-primary" id="addRowBtn">
                         <i class="bi bi-plus-lg me-1"></i> Tambah Baris Produk
                     </button>
@@ -103,7 +103,7 @@
                             </tbody>
                             <tfoot class="table-light">
                                 <tr>
-                                    <td colspan="3" class="text-end fw-bold text-white fs-6">TOTAL KESELURUHAN:</td>
+                                    <td colspan="3" class="text-end fw-bold text-dark fs-6">TOTAL KESELURUHAN:</td>
                                     <td class="text-end fw-bold text-success font-monospace fs-5" id="grandTotalDisplay">Rp 0</td>
                                     <td></td>
                                 </tr>

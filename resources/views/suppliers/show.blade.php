@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-3">
     <div>
-        <h4 class="fw-bold text-white mb-0"><i class="bi bi-truck me-2 text-danger"></i>{{ $supplier->name }}</h4>
+        <h4 class="fw-bold text-dark mb-0"><i class="bi bi-truck me-2 text-danger"></i>{{ $supplier->name }}</h4>
         <span class="text-muted small">Detail data pemasok kamera & riwayat pengadaan</span>
     </div>
     <div class="d-flex gap-2">
@@ -20,7 +20,7 @@
     <div class="col-md-4">
         <div class="card border-0 shadow-sm" >
             <div class="card-body p-4">
-                <h5 class="fw-bold text-white mb-3">Informasi Kontak</h5>
+                <h5 class="fw-bold text-dark mb-3">Informasi Kontak</h5>
                 <div class="mb-3">
                     <span class="text-muted small d-block">Nama Perusahaan:</span>
                     <span class="text-light fw-semibold">{{ $supplier->name }}</span>
@@ -48,7 +48,7 @@
     <div class="col-md-8">
         <div class="card border-0 shadow-sm" >
             <div class="card-header bg-transparent border-0 pt-3">
-                <h5 class="fw-bold text-white mb-0"><i class="bi bi-clock-history me-2 text-primary"></i>Riwayat Transaksi Stock In ({{ $supplier->purchases->count() }})</h5>
+                <h5 class="fw-bold text-dark mb-0"><i class="bi bi-clock-history me-2 text-primary"></i>Riwayat Transaksi Stock In ({{ $supplier->purchases->count() }})</h5>
             </div>
             <div class="card-body p-3">
                 <div class="table-responsive">

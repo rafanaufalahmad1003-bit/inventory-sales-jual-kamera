@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
     <div>
-        <h3 class="fw-bold text-white mb-0"><i class="bi bi-truck me-2 text-danger"></i>Data Pemasok (Supplier)</h3>
+        <h3 class="fw-bold text-dark mb-0"><i class="bi bi-truck me-2 text-danger"></i>Data Pemasok (Supplier)</h3>
         <p class="text-muted small mb-0">Daftar distributor resmi dan pemasok kamera</p>
     </div>
     @if(auth()->user()->isOwner())
@@ -62,7 +62,7 @@
                     <tr >
                         <td class="text-muted">{{ $suppliers->firstItem() + $index }}</td>
                         <td>
-                            <div class="fw-semibold text-white">{{ $supplier->name }}</div>
+                            <div class="fw-semibold text-dark">{{ $supplier->name }}</div>
                             <div class="text-muted small">{{ Str::limit($supplier->address, 35) ?? '-' }}</div>
                         </td>
                         <td>{{ $supplier->contact_person ?? '-' }}</td>

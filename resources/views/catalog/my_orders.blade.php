@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
-        <h3 class="fw-bold text-white mb-0"><i class="bi bi-bag-check me-2 text-danger"></i>Riwayat Pesanan Saya</h3>
+        <h3 class="fw-bold text-dark mb-0"><i class="bi bi-bag-check me-2 text-danger"></i>Riwayat Pesanan Saya</h3>
         <p class="text-muted small mb-0">Daftar pesanan kamera & aksesoris yang pernah Anda pesan</p>
     </div>
     <a href="{{ route('catalog.index') }}" class="btn btn-danger" style="background-color: var(--cs-accent); border:none;">
@@ -62,7 +62,7 @@
                     <tr>
                         <td colspan="6" class="text-center py-5 text-muted">
                             <i class="bi bi-bag-x display-4 d-block mb-3"></i>
-                            <h5 class="text-white">Belum Ada Riwayat Pesanan</h5>
+                            <h5 class="text-dark">Belum Ada Riwayat Pesanan</h5>
                             <p class="text-muted mb-3">Anda belum pernah memesan kamera di toko kami.</p>
                             <a href="{{ route('catalog.index') }}" class="btn btn-danger" style="background-color: var(--cs-accent); border:none;">
                                 Jelajahi Katalog Kamera

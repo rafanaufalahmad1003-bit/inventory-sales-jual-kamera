@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
-        <h3 class="fw-bold text-white mb-0"><i class="bi bi-tags me-2 text-danger"></i>Kategori Kamera</h3>
+        <h3 class="fw-bold text-dark mb-0"><i class="bi bi-tags me-2 text-danger"></i>Kategori Kamera</h3>
         <p class="text-muted small mb-0">Kelola kategori produk kamera dan aksesoris</p>
     </div>
     @if(auth()->user()->isOwner())
@@ -51,7 +51,7 @@
                     @forelse($categories as $index => $category)
                     <tr >
                         <td class="text-muted">{{ $categories->firstItem() + $index }}</td>
-                        <td class="fw-semibold text-white">
+                        <td class="fw-semibold text-dark">
                             <i class="bi bi-folder2-open text-warning me-2"></i>{{ $category->name }}
                         </td>
                         <td class="text-muted small">{{ $category->description ?? '-' }}</td>

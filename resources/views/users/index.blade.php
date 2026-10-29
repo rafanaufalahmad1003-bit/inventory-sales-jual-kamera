@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
     <div>
-        <h3 class="fw-bold text-white mb-0"><i class="bi bi-people-fill me-2 text-danger"></i>Manajemen Pengguna & Hak Akses</h3>
+        <h3 class="fw-bold text-dark mb-0"><i class="bi bi-people-fill me-2 text-danger"></i>Manajemen Pengguna & Hak Akses</h3>
         <p class="text-muted small mb-0">Hanya Owner yang berhak mengelola akun Owner, Admin, Staff, dan Pelanggan</p>
     </div>
     <a href="{{ route('users.create') }}" class="btn btn-danger" style="background-color: var(--cs-accent); border:none;">
@@ -56,7 +56,7 @@
                     <tr >
                         <td class="text-muted">{{ $users->firstItem() + $index }}</td>
                         <td>
-                            <div class="fw-semibold text-white">
+                            <div class="fw-semibold text-dark">
                                 <i class="bi bi-person-fill text-muted me-1"></i>{{ $user->name }}
                                 @if($user->id === auth()->id())
                                     <span class="badge bg-secondary ms-1 small">Anda</span>

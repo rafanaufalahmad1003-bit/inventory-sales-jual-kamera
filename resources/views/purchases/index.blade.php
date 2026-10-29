@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
     <div>
-        <h3 class="fw-bold text-white mb-0"><i class="bi bi-box-arrow-in-down me-2 text-primary"></i>Transaksi Pembelian (Stock In)</h3>
+        <h3 class="fw-bold text-dark mb-0"><i class="bi bi-box-arrow-in-down me-2 text-primary"></i>Transaksi Pembelian (Stock In)</h3>
         <p class="text-muted small mb-0">Pemasukan stok kamera dari distributor & pemasok resmi</p>
     </div>
     <a href="{{ route('purchases.create') }}" class="btn btn-primary">
@@ -67,7 +67,7 @@
                             {{ $purchase->purchased_at ? $purchase->purchased_at->format('d/m/Y H:i') : '-' }}
                         </td>
                         <td>
-                            <div class="fw-semibold text-white">{{ $purchase->supplier->name ?? '-' }}</div>
+                            <div class="fw-semibold text-dark">{{ $purchase->supplier->name ?? '-' }}</div>
                             <span class="text-muted small">{{ $purchase->purchaseItems->count() }} macam item</span>
                         </td>
                         <td>

@@ -7,7 +7,7 @@
     <div class="col-lg-9">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
-                <h4 class="fw-bold text-white mb-0"><i class="bi bi-cart-check-fill text-danger me-2"></i>Form Pemesanan Kamera</h4>
+                <h4 class="fw-bold text-dark mb-0"><i class="bi bi-cart-check-fill text-danger me-2"></i>Form Pemesanan Kamera</h4>
                 <p class="text-muted small mb-0">Isi data pengiriman Anda untuk menyelesaikan pemesanan kamera</p>
             </div>
             <a href="{{ route('catalog.show', $product) }}" class="btn btn-outline-secondary btn-sm">
@@ -20,7 +20,7 @@
             <div class="col-md-5">
                 <div class="card border-0 shadow-sm" >
                     <div class="card-header bg-transparent border-0 pt-3">
-                        <h6 class="fw-bold text-white mb-0"><i class="bi bi-camera me-1 text-danger"></i> Ringkasan Produk</h6>
+                        <h6 class="fw-bold text-dark mb-0"><i class="bi bi-camera me-1 text-danger"></i> Ringkasan Produk</h6>
                     </div>
                     <div class="card-body p-3">
                         <div class="text-center bg-dark p-2 rounded mb-3">
@@ -31,7 +31,7 @@
                             @endif
                         </div>
 
-                        <h5 class="fw-bold text-white mb-1">{{ $product->name }}</h5>
+                        <h5 class="fw-bold text-dark mb-1">{{ $product->name }}</h5>
                         <span class="badge bg-secondary mb-2">{{ $product->category->name ?? 'Kamera' }}</span>
 
                         <div class="p-3 bg-dark rounded border border-secondary-subtle mb-3">
@@ -61,7 +61,7 @@
             <div class="col-md-7">
                 <div class="card border-0 shadow-sm" >
                     <div class="card-header bg-transparent border-0 pt-3">
-                        <h6 class="fw-bold text-white mb-0"><i class="bi bi-person-lines-fill me-1 text-danger"></i> Data Pembeli & Tujuan Pengiriman</h6>
+                        <h6 class="fw-bold text-dark mb-0"><i class="bi bi-person-lines-fill me-1 text-danger"></i> Data Pembeli & Tujuan Pengiriman</h6>
                     </div>
                     <div class="card-body p-4 pt-2">
                         <form action="{{ route('catalog.processOrder', $product) }}" method="POST" id="orderForm">

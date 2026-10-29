@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
     <div>
-        <h4 class="fw-bold text-white mb-0">
+        <h4 class="fw-bold text-dark mb-0">
             <i class="bi bi-receipt text-primary me-2"></i>Faktur Pembelian: {{ $purchase->purchase_number }}
         </h4>
         <span class="text-muted small">Transaksi Stock In dari pemasok kamera</span>
@@ -29,7 +29,7 @@
     <div class="col-md-4">
         <div class="card border-0 shadow-sm" >
             <div class="card-body p-4">
-                <h5 class="fw-bold text-white mb-3">Informasi Transaksi</h5>
+                <h5 class="fw-bold text-dark mb-3">Informasi Transaksi</h5>
 
                 <div class="mb-3">
                     <span class="text-muted small d-block">Status:</span>
@@ -70,7 +70,7 @@
     <div class="col-md-8">
         <div class="card border-0 shadow-sm" >
             <div class="card-header bg-transparent border-0 pt-3">
-                <h5 class="fw-bold text-white mb-0"><i class="bi bi-box-seam me-2 text-primary"></i>Rincian Produk Kamera Yang Diterima</h5>
+                <h5 class="fw-bold text-dark mb-0"><i class="bi bi-box-seam me-2 text-primary"></i>Rincian Produk Kamera Yang Diterima</h5>
             </div>
             <div class="card-body p-3">
                 <div class="table-responsive">
@@ -89,7 +89,7 @@
                             <tr >
                                 <td class="text-muted">{{ $idx + 1 }}</td>
                                 <td>
-                                    <div class="fw-semibold text-white">{{ $item->product->name ?? '-' }}</div>
+                                    <div class="fw-semibold text-dark">{{ $item->product->name ?? '-' }}</div>
                                     <span class="badge bg-dark border border-secondary-subtle text-muted font-monospace small">{{ $item->product->sku ?? '-' }}</span>
                                 </td>
                                 <td class="text-center fw-bold text-primary font-monospace">+{{ $item->quantity }}</td>
@@ -100,7 +100,7 @@
                         </tbody>
                         <tfoot class="table-light">
                             <tr>
-                                <td colspan="4" class="text-end fw-bold text-white fs-6">TOTAL PEMBELIAN:</td>
+                                <td colspan="4" class="text-end fw-bold text-dark fs-6">TOTAL PEMBELIAN:</td>
                                 <td class="text-end fw-bold text-success font-monospace fs-5">{{ $purchase->formatted_total }}</td>
                             </tr>
                         </tfoot>
