@@ -17,7 +17,7 @@
             @csrf
 
             <!-- Header Card -->
-            <div class="card border-0 shadow-sm mb-3" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+            <div class="card border-0 shadow-sm mb-3" >
                 <div class="card-header bg-transparent border-0 pt-3">
                     <h6 class="fw-bold text-white mb-0"><i class="bi bi-person-circle text-success me-1"></i> Informasi Pembeli & Tanggal Penjualan</h6>
                 </div>
@@ -25,7 +25,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Pilih Pelanggan (Customer)</label>
-                            <select name="customer_id" class="form-select bg-dark border-secondary text-light @error('customer_id') is-invalid @enderror">
+                            <select name="customer_id" class="form-select border-secondary-subtle-subtle @error('customer_id') is-invalid @enderror">
                                 <option value="">-- Pelanggan Umum (Walk-in Customer) --</option>
                                 @foreach($customers as $customer)
                                     <option value="{{ $customer->id }}" {{ (old('customer_id', request('customer_id')) == $customer->id) ? 'selected' : '' }}>
@@ -39,21 +39,21 @@
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Tanggal & Waktu Penjualan <span class="text-danger">*</span></label>
-                            <input type="datetime-local" name="sold_at" class="form-control bg-dark border-secondary text-light @error('sold_at') is-invalid @enderror" value="{{ old('sold_at', now()->format('Y-m-d\TH:i')) }}" required>
+                            <input type="datetime-local" name="sold_at" class="form-control border-secondary-subtle-subtle @error('sold_at') is-invalid @enderror" value="{{ old('sold_at', now()->format('Y-m-d\TH:i')) }}" required>
                             @error('sold_at') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                         </div>
                     </div>
 
                     <div class="mb-0">
                         <label class="form-label text-light fw-semibold">Catatan Transaksi</label>
-                        <input type="text" name="notes" class="form-control bg-dark border-secondary text-light @error('notes') is-invalid @enderror" value="{{ old('notes') }}" placeholder="Contoh: Pembayaran tunai/transfer, garansi toko 1 tahun...">
+                        <input type="text" name="notes" class="form-control border-secondary-subtle-subtle @error('notes') is-invalid @enderror" value="{{ old('notes') }}" placeholder="Contoh: Pembayaran tunai/transfer, garansi toko 1 tahun...">
                         @error('notes') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                     </div>
                 </div>
             </div>
 
             <!-- Items Card -->
-            <div class="card border-0 shadow-sm mb-3" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+            <div class="card border-0 shadow-sm mb-3" >
                 <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 pb-2">
                     <h6 class="fw-bold text-white mb-0"><i class="bi bi-camera text-success me-1"></i> Produk Kamera Yang Dibeli</h6>
                     <button type="button" class="btn btn-sm btn-outline-success" id="addRowBtn">
@@ -68,8 +68,8 @@
                     @enderror
 
                     <div class="table-responsive">
-                        <table class="table table-dark align-middle mb-0" id="itemsTable" style="background: transparent;">
-                            <thead class="text-muted small text-uppercase">
+                        <table class="table align-middle mb-0" id="itemsTable" >
+                            <thead class="table-light text-secondary small text-uppercase">
                                 <tr>
                                     <th style="min-width: 280px;">Produk Kamera & Stok Tersedia <span class="text-danger">*</span></th>
                                     <th style="width: 140px;">Kuantitas (Qty) <span class="text-danger">*</span></th>
@@ -81,7 +81,7 @@
                             <tbody id="itemsBody">
                                 <tr class="item-row" data-index="0">
                                     <td>
-                                        <select name="items[0][product_id]" class="form-select bg-dark border-secondary text-light product-select" required>
+                                        <select name="items[0][product_id]" class="form-select border-secondary-subtle-subtle product-select" required>
                                             <option value="">-- Pilih Kamera / Aksesoris --</option>
                                             @foreach($products as $p)
                                                 <option value="{{ $p->id }}" data-selling-price="{{ (int)$p->selling_price }}" data-stock="{{ $p->stock }}">
@@ -92,10 +92,10 @@
                                         <div class="stock-warning text-danger small mt-1 d-none"><i class="bi bi-exclamation-triangle"></i> Kuantitas melebihi stok yang tersedia!</div>
                                     </td>
                                     <td>
-                                        <input type="number" name="items[0][quantity]" class="form-control bg-dark border-secondary text-light text-center qty-input" min="1" value="1" required>
+                                        <input type="number" name="items[0][quantity]" class="form-control border-secondary-subtle-subtle text-center qty-input" min="1" value="1" required>
                                     </td>
                                     <td>
-                                        <span class="form-control bg-dark border-secondary text-light font-monospace price-display">Rp 0</span>
+                                        <span class="form-control border-secondary-subtle-subtle font-monospace price-display">Rp 0</span>
                                     </td>
                                     <td class="text-end fw-semibold font-monospace text-success subtotal-display">
                                         Rp 0
@@ -107,7 +107,7 @@
                                     </td>
                                 </tr>
                             </tbody>
-                            <tfoot style="border-top: 2px solid var(--cs-border);">
+                            <tfoot class="table-light">
                                 <tr>
                                     <td colspan="3" class="text-end fw-bold text-white fs-6">TOTAL PENJUALAN:</td>
                                     <td class="text-end fw-bold text-success font-monospace fs-5" id="grandTotalDisplay">Rp 0</td>

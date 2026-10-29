@@ -15,13 +15,13 @@
     @endif
 </div>
 
-<div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+<div class="card border-0 shadow-sm" >
     <div class="card-body p-3">
         <form method="GET" action="{{ route('categories.index') }}" class="row g-2 mb-3">
             <div class="col-md-5">
                 <div class="input-group">
-                    <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-search"></i></span>
-                    <input type="text" name="search" class="form-control bg-dark border-secondary text-light" placeholder="Cari nama atau deskripsi kategori..." value="{{ request('search') }}">
+                    <span class="input-group-text bg-light border-secondary-subtle-subtle text-muted"><i class="bi bi-search"></i></span>
+                    <input type="text" name="search" class="form-control border-secondary-subtle-subtle" placeholder="Cari nama atau deskripsi kategori..." value="{{ request('search') }}">
                 </div>
             </div>
             <div class="col-md-2">
@@ -35,8 +35,8 @@
         </form>
 
         <div class="table-responsive">
-            <table class="table table-dark table-hover align-middle mb-0" style="background: transparent;">
-                <thead class="text-muted small text-uppercase" style="border-bottom: 2px solid var(--cs-border);">
+            <table class="table table-hover align-middle mb-0" >
+                <thead class="table-light text-secondary small text-uppercase">
                     <tr>
                         <th style="width: 60px;">#</th>
                         <th>Nama Kategori</th>
@@ -49,7 +49,7 @@
                 </thead>
                 <tbody>
                     @forelse($categories as $index => $category)
-                    <tr style="border-bottom: 1px solid var(--cs-border);">
+                    <tr >
                         <td class="text-muted">{{ $categories->firstItem() + $index }}</td>
                         <td class="fw-semibold text-white">
                             <i class="bi bi-folder2-open text-warning me-2"></i>{{ $category->name }}

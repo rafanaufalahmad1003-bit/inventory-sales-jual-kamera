@@ -16,7 +16,7 @@
 
 <div class="row g-3">
     <div class="col-md-4">
-        <div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+        <div class="card border-0 shadow-sm" >
             <div class="card-body p-4">
                 <h5 class="fw-bold text-white mb-3">Informasi Pelanggan</h5>
                 <div class="mb-3">
@@ -45,14 +45,14 @@
     </div>
 
     <div class="col-md-8">
-        <div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+        <div class="card border-0 shadow-sm" >
             <div class="card-header bg-transparent border-0 pt-3">
                 <h5 class="fw-bold text-white mb-0"><i class="bi bi-bag-check me-2 text-success"></i>Riwayat Transaksi Pembelian ({{ $customer->sales->count() }})</h5>
             </div>
             <div class="card-body p-3">
                 <div class="table-responsive">
-                    <table class="table table-dark table-hover align-middle mb-0 small" style="background: transparent;">
-                        <thead class="text-muted">
+                    <table class="table table-hover align-middle mb-0 small" >
+                        <thead class="table-light text-secondary">
                             <tr>
                                 <th>No. Transaksi</th>
                                 <th>Tanggal</th>

@@ -13,13 +13,13 @@
     </a>
 </div>
 
-<div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+<div class="card border-0 shadow-sm" >
     <div class="card-body p-3">
         <form method="GET" action="{{ route('customers.index') }}" class="row g-2 mb-3">
             <div class="col-md-5">
                 <div class="input-group">
-                    <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-search"></i></span>
-                    <input type="text" name="search" class="form-control bg-dark border-secondary text-light" placeholder="Cari nama pelanggan, nomor HP, email..." value="{{ request('search') }}">
+                    <span class="input-group-text bg-light border-secondary-subtle-subtle text-muted"><i class="bi bi-search"></i></span>
+                    <input type="text" name="search" class="form-control border-secondary-subtle-subtle" placeholder="Cari nama pelanggan, nomor HP, email..." value="{{ request('search') }}">
                 </div>
             </div>
             <div class="col-md-2">
@@ -33,8 +33,8 @@
         </form>
 
         <div class="table-responsive">
-            <table class="table table-dark table-hover align-middle mb-0" style="background: transparent;">
-                <thead class="text-muted small text-uppercase" style="border-bottom: 2px solid var(--cs-border);">
+            <table class="table table-hover align-middle mb-0" >
+                <thead class="table-light text-secondary small text-uppercase">
                     <tr>
                         <th style="width: 50px;">#</th>
                         <th>Nama Pelanggan</th>
@@ -47,7 +47,7 @@
                 </thead>
                 <tbody>
                     @forelse($customers as $index => $customer)
-                    <tr style="border-bottom: 1px solid var(--cs-border);">
+                    <tr >
                         <td class="text-muted">{{ $customers->firstItem() + $index }}</td>
                         <td>
                             <div class="fw-semibold text-white">

@@ -6,7 +6,7 @@
 <div class="d-flex justify-content-between align-items-center mb-3">
     <div>
         <h4 class="fw-bold text-white mb-0"><i class="bi bi-camera me-2 text-danger"></i>{{ $product->name }}</h4>
-        <span class="badge bg-dark border border-secondary text-info font-monospace">{{ $product->sku }}</span>
+        <span class="badge bg-dark border border-secondary-subtle text-info font-monospace">{{ $product->sku }}</span>
         <span class="badge bg-secondary ms-1">{{ $product->category->name ?? '-' }}</span>
     </div>
     <div class="d-flex gap-2">
@@ -19,7 +19,7 @@
 
 <div class="row g-3 mb-4">
     <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+        <div class="card border-0 shadow-sm h-100" >
             @if($product->image)
             <img src="{{ $product->image }}" class="card-img-top p-2 rounded" alt="{{ $product->name }}" style="max-height: 240px; object-fit: cover;">
             @else
@@ -64,7 +64,7 @@
     </div>
 
     <div class="col-md-8">
-        <div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+        <div class="card border-0 shadow-sm" >
             <div class="card-header bg-transparent border-0 pt-3">
                 <ul class="nav nav-tabs card-header-tabs" id="productTabs" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -84,8 +84,8 @@
                     <!-- Sales Tab -->
                     <div class="tab-pane fade show active" id="sales" role="tabpanel">
                         <div class="table-responsive">
-                            <table class="table table-dark table-hover align-middle mb-0 small" style="background: transparent;">
-                                <thead class="text-muted">
+                            <table class="table table-hover align-middle mb-0 small" >
+                                <thead class="table-light text-secondary">
                                     <tr>
                                         <th>No. Penjualan</th>
                                         <th>Tanggal</th>
@@ -122,8 +122,8 @@
                     <!-- Purchases Tab -->
                     <div class="tab-pane fade" id="purchases" role="tabpanel">
                         <div class="table-responsive">
-                            <table class="table table-dark table-hover align-middle mb-0 small" style="background: transparent;">
-                                <thead class="text-muted">
+                            <table class="table table-hover align-middle mb-0 small" >
+                                <thead class="table-light text-secondary">
                                     <tr>
                                         <th>No. Pembelian</th>
                                         <th>Tanggal</th>

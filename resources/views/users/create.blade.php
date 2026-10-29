@@ -10,7 +10,7 @@
             <a href="{{ route('users.index') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i> Kembali</a>
         </div>
 
-        <div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+        <div class="card border-0 shadow-sm" >
             <div class="card-body p-4">
                 <form action="{{ route('users.store') }}" method="POST">
                     @csrf
@@ -18,13 +18,13 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Nama Lengkap <span class="text-danger">*</span></label>
-                            <input type="text" name="name" class="form-control bg-dark border-secondary text-light @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Contoh: Rian Pratama" required>
+                            <input type="text" name="name" class="form-control border-secondary-subtle-subtle @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Contoh: Rian Pratama" required>
                             @error('name') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Role Hak Akses <span class="text-danger">*</span></label>
-                            <select name="role" class="form-select bg-dark border-secondary text-light @error('role') is-invalid @enderror" required>
+                            <select name="role" class="form-select border-secondary-subtle-subtle @error('role') is-invalid @enderror" required>
                                 <option value="">-- Pilih Role --</option>
                                 <option value="staff" {{ old('role') == 'staff' ? 'selected' : '' }}>Staff (Lihat Stok, Input Pembelian & Penjualan)</option>
                                 <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin (Sama seperti Staff: Input Pembelian & Penjualan)</option>
@@ -38,13 +38,13 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Email Login <span class="text-danger">*</span></label>
-                            <input type="email" name="email" class="form-control bg-dark border-secondary text-light @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="user@camera.com" required>
+                            <input type="email" name="email" class="form-control border-secondary-subtle-subtle @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="user@camera.com" required>
                             @error('email') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Password <span class="text-danger">*</span></label>
-                            <input type="password" name="password" class="form-control bg-dark border-secondary text-light @error('password') is-invalid @enderror" placeholder="Min. 6 karakter" required>
+                            <input type="password" name="password" class="form-control border-secondary-subtle-subtle @error('password') is-invalid @enderror" placeholder="Min. 6 karakter" required>
                             @error('password') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                         </div>
                     </div>
@@ -52,13 +52,13 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Nomor Telepon</label>
-                            <input type="text" name="phone" class="form-control bg-dark border-secondary text-light @error('phone') is-invalid @enderror" value="{{ old('phone') }}" placeholder="081234567890">
+                            <input type="text" name="phone" class="form-control border-secondary-subtle-subtle @error('phone') is-invalid @enderror" value="{{ old('phone') }}" placeholder="081234567890">
                             @error('phone') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Alamat</label>
-                            <input type="text" name="address" class="form-control bg-dark border-secondary text-light @error('address') is-invalid @enderror" value="{{ old('address') }}" placeholder="Alamat domisili...">
+                            <input type="text" name="address" class="form-control border-secondary-subtle-subtle @error('address') is-invalid @enderror" value="{{ old('address') }}" placeholder="Alamat domisili...">
                             @error('address') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                         </div>
                     </div>

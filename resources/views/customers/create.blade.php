@@ -10,34 +10,34 @@
             <a href="{{ route('customers.index') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i> Kembali</a>
         </div>
 
-        <div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+        <div class="card border-0 shadow-sm" >
             <div class="card-body p-4">
                 <form action="{{ route('customers.store') }}" method="POST">
                     @csrf
 
                     <div class="mb-3">
                         <label class="form-label text-light fw-semibold">Nama Lengkap / Instansi <span class="text-danger">*</span></label>
-                        <input type="text" name="name" class="form-control bg-dark border-secondary text-light @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Contoh: Studio Foto Mentari / Dian Sastro" required>
+                        <input type="text" name="name" class="form-control border-secondary-subtle-subtle @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Contoh: Studio Foto Mentari / Dian Sastro" required>
                         @error('name') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Nomor WhatsApp / HP <span class="text-danger">*</span></label>
-                            <input type="text" name="phone" class="form-control bg-dark border-secondary text-light @error('phone') is-invalid @enderror" value="{{ old('phone') }}" placeholder="Contoh: 081234567890" required>
+                            <input type="text" name="phone" class="form-control border-secondary-subtle-subtle @error('phone') is-invalid @enderror" value="{{ old('phone') }}" placeholder="Contoh: 081234567890" required>
                             @error('phone') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Email</label>
-                            <input type="email" name="email" class="form-control bg-dark border-secondary text-light @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="pelanggan@example.com">
+                            <input type="email" name="email" class="form-control border-secondary-subtle-subtle @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="pelanggan@example.com">
                             @error('email') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                         </div>
                     </div>
 
                     <div class="mb-4">
                         <label class="form-label text-light fw-semibold">Alamat Lengkap</label>
-                        <textarea name="address" rows="3" class="form-control bg-dark border-secondary text-light @error('address') is-invalid @enderror" placeholder="Alamat domisili atau studio...">{{ old('address') }}</textarea>
+                        <textarea name="address" rows="3" class="form-control border-secondary-subtle-subtle @error('address') is-invalid @enderror" placeholder="Alamat domisili atau studio...">{{ old('address') }}</textarea>
                         @error('address') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                     </div>
 

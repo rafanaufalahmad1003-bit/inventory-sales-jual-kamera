@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Hero Banner -->
-<div class="p-4 p-md-5 mb-4 rounded-3 text-white shadow-sm position-relative overflow-hidden" style="background: linear-gradient(135deg, #1f1b2e 0%, #16213e 50%, #0f3460 100%); border: 1px solid var(--cs-border);">
+<div class="p-4 p-md-5 mb-4 rounded-3 text-white shadow-sm position-relative overflow-hidden" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white !important;" class="text-white">
     <div class="col-md-8 position-relative" style="z-index: 2;">
         <span class="badge bg-danger px-3 py-2 mb-2"><i class="bi bi-camera-fill me-1"></i> Toko Kamera & Aksesoris Fotografi</span>
         <h1 class="display-5 fw-bold mb-2">Beli Kamera Impian Anda</h1>
@@ -28,17 +28,17 @@
 </div>
 
 <!-- Search & Filter -->
-<div class="card border-0 shadow-sm mb-4" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+<div class="card border-0 shadow-sm mb-4" >
     <div class="card-body p-3">
         <form method="GET" action="{{ route('catalog.index') }}" class="row g-2 align-items-center">
             <div class="col-md-5">
                 <div class="input-group">
-                    <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-search"></i></span>
-                    <input type="text" name="search" class="form-control bg-dark border-secondary text-light" placeholder="Cari nama kamera, tipe, merk..." value="{{ request('search') }}">
+                    <span class="input-group-text bg-light border-secondary-subtle-subtle text-muted"><i class="bi bi-search"></i></span>
+                    <input type="text" name="search" class="form-control border-secondary-subtle-subtle" placeholder="Cari nama kamera, tipe, merk..." value="{{ request('search') }}">
                 </div>
             </div>
             <div class="col-md-4">
-                <select name="category_id" class="form-select bg-dark border-secondary text-light">
+                <select name="category_id" class="form-select border-secondary-subtle-subtle">
                     <option value="">-- Semua Kategori Kamera --</option>
                     @foreach($categories as $cat)
                         <option value="{{ $cat->id }}" {{ request('category_id') == $cat->id ? 'selected' : '' }}>
@@ -63,7 +63,7 @@
 <div class="row g-4 mb-4">
     @forelse($products as $product)
     <div class="col-md-6 col-lg-4">
-        <div class="card h-100 border-0 shadow-sm transition-hover" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border) !important; transition: transform 0.2s;">
+        <div class="card h-100 border-0 shadow-sm transition-hover" style=" border: 1px solid var(--cs-border) !important; transition: transform 0.2s;">
             <!-- Product Image -->
             <div class="position-relative overflow-hidden bg-dark text-center" style="height: 220px;">
                 @if($product->image)
@@ -74,7 +74,7 @@
                 </div>
                 @endif
 
-                <span class="position-absolute top-0 start-0 m-2 badge bg-dark bg-opacity-75 text-light border border-secondary">
+                <span class="position-absolute top-0 start-0 m-2 badge bg-dark bg-opacity-75 text-light border border-secondary-subtle">
                     {{ $product->category->name ?? 'Kamera' }}
                 </span>
 

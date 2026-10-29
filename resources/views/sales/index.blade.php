@@ -13,24 +13,24 @@
     </a>
 </div>
 
-<div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+<div class="card border-0 shadow-sm" >
     <div class="card-body p-3">
         <form method="GET" action="{{ route('sales.index') }}" class="row g-2 mb-3">
             <div class="col-md-3">
-                <input type="text" name="search" class="form-control bg-dark border-secondary text-light" placeholder="No. Penjualan atau Pelanggan..." value="{{ request('search') }}">
+                <input type="text" name="search" class="form-control border-secondary-subtle-subtle" placeholder="No. Penjualan atau Pelanggan..." value="{{ request('search') }}">
             </div>
             <div class="col-md-2">
-                <select name="status" class="form-select bg-dark border-secondary text-light">
+                <select name="status" class="form-select border-secondary-subtle-subtle">
                     <option value="">-- Semua Status --</option>
                     <option value="completed" {{ request('status') == 'completed' ? 'selected' : '' }}>Selesai</option>
                     <option value="cancelled" {{ request('status') == 'cancelled' ? 'selected' : '' }}>Dibatalkan</option>
                 </select>
             </div>
             <div class="col-md-2">
-                <input type="date" name="from_date" class="form-control bg-dark border-secondary text-light" value="{{ request('from_date') }}" title="Dari Tanggal">
+                <input type="date" name="from_date" class="form-control border-secondary-subtle-subtle" value="{{ request('from_date') }}" title="Dari Tanggal">
             </div>
             <div class="col-md-2">
-                <input type="date" name="to_date" class="form-control bg-dark border-secondary text-light" value="{{ request('to_date') }}" title="Sampai Tanggal">
+                <input type="date" name="to_date" class="form-control border-secondary-subtle-subtle" value="{{ request('to_date') }}" title="Sampai Tanggal">
             </div>
             <div class="col-md-3 d-flex gap-1">
                 <button type="submit" class="btn btn-secondary flex-grow-1"><i class="bi bi-funnel me-1"></i> Filter</button>
@@ -41,8 +41,8 @@
         </form>
 
         <div class="table-responsive">
-            <table class="table table-dark table-hover align-middle mb-0" style="background: transparent;">
-                <thead class="text-muted small text-uppercase" style="border-bottom: 2px solid var(--cs-border);">
+            <table class="table table-hover align-middle mb-0" >
+                <thead class="table-light text-secondary small text-uppercase">
                     <tr>
                         <th style="width: 50px;">#</th>
                         <th>No. Faktur</th>
@@ -56,7 +56,7 @@
                 </thead>
                 <tbody>
                     @forelse($sales as $index => $sale)
-                    <tr style="border-bottom: 1px solid var(--cs-border);">
+                    <tr >
                         <td class="text-muted">{{ $sales->firstItem() + $index }}</td>
                         <td>
                             <a href="{{ route('sales.show', $sale) }}" class="fw-semibold text-info text-decoration-none font-monospace">
@@ -77,7 +77,7 @@
                             @endif
                         </td>
                         <td>
-                            <span class="badge bg-dark border border-secondary text-light">
+                            <span class="badge bg-dark border border-secondary-subtle text-light">
                                 <i class="bi bi-person-badge me-1"></i>{{ $sale->user->name ?? '-' }}
                             </span>
                         </td>

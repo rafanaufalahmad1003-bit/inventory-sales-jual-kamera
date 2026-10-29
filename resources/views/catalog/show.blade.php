@@ -9,7 +9,7 @@
     </a>
 </div>
 
-<div class="card border-0 shadow-sm mb-4" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+<div class="card border-0 shadow-sm mb-4" >
     <div class="card-body p-4">
         <div class="row g-4">
             <div class="col-md-5">
@@ -27,7 +27,7 @@
             <div class="col-md-7 d-flex flex-column">
                 <div class="mb-2">
                     <span class="badge bg-secondary me-1">{{ $product->category->name ?? 'Kamera' }}</span>
-                    <span class="badge bg-dark border border-secondary text-info font-monospace">{{ $product->sku }}</span>
+                    <span class="badge bg-dark border border-secondary-subtle text-info font-monospace">{{ $product->sku }}</span>
                 </div>
 
                 <h2 class="fw-bold text-white mb-2">{{ $product->name }}</h2>
@@ -77,7 +77,7 @@
 <div class="row g-3">
     @foreach($relatedProducts as $rel)
     <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+        <div class="card h-100 border-0 shadow-sm" >
             <div class="card-body p-3">
                 <h6 class="fw-bold text-white mb-1">{{ $rel->name }}</h6>
                 <div class="text-success fw-bold font-monospace small mb-2">{{ $rel->formatted_selling_price }}</div>

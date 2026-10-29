@@ -17,7 +17,7 @@
             @csrf
 
             <!-- Header Card -->
-            <div class="card border-0 shadow-sm mb-3" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+            <div class="card border-0 shadow-sm mb-3" >
                 <div class="card-header bg-transparent border-0 pt-3">
                     <h6 class="fw-bold text-white mb-0"><i class="bi bi-info-circle text-primary me-1"></i> Data Pemasok & Waktu Pembelian</h6>
                 </div>
@@ -25,7 +25,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Pilih Pemasok (Supplier) <span class="text-danger">*</span></label>
-                            <select name="supplier_id" class="form-select bg-dark border-secondary text-light @error('supplier_id') is-invalid @enderror" required>
+                            <select name="supplier_id" class="form-select border-secondary-subtle-subtle @error('supplier_id') is-invalid @enderror" required>
                                 <option value="">-- Pilih Distributor / Supplier --</option>
                                 @foreach($suppliers as $supplier)
                                     <option value="{{ $supplier->id }}" {{ old('supplier_id') == $supplier->id ? 'selected' : '' }}>
@@ -38,21 +38,21 @@
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label text-light fw-semibold">Tanggal & Waktu Transaksi <span class="text-danger">*</span></label>
-                            <input type="datetime-local" name="purchased_at" class="form-control bg-dark border-secondary text-light @error('purchased_at') is-invalid @enderror" value="{{ old('purchased_at', now()->format('Y-m-d\TH:i')) }}" required>
+                            <input type="datetime-local" name="purchased_at" class="form-control border-secondary-subtle-subtle @error('purchased_at') is-invalid @enderror" value="{{ old('purchased_at', now()->format('Y-m-d\TH:i')) }}" required>
                             @error('purchased_at') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                         </div>
                     </div>
 
                     <div class="mb-0">
                         <label class="form-label text-light fw-semibold">Catatan / Keterangan Pembelian</label>
-                        <input type="text" name="notes" class="form-control bg-dark border-secondary text-light @error('notes') is-invalid @enderror" value="{{ old('notes') }}" placeholder="Contoh: Pengiriman batch 1 invoice #CANON-9902...">
+                        <input type="text" name="notes" class="form-control border-secondary-subtle-subtle @error('notes') is-invalid @enderror" value="{{ old('notes') }}" placeholder="Contoh: Pengiriman batch 1 invoice #CANON-9902...">
                         @error('notes') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                     </div>
                 </div>
             </div>
 
             <!-- Items Card -->
-            <div class="card border-0 shadow-sm mb-3" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+            <div class="card border-0 shadow-sm mb-3" >
                 <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 pb-2">
                     <h6 class="fw-bold text-white mb-0"><i class="bi bi-cart-plus text-primary me-1"></i> Rincian Produk Kamera (Stock In)</h6>
                     <button type="button" class="btn btn-sm btn-outline-primary" id="addRowBtn">
@@ -63,8 +63,8 @@
                     @error('items') <div class="alert alert-danger py-2 small mb-3">{{ $message }}</div> @enderror
 
                     <div class="table-responsive">
-                        <table class="table table-dark align-middle mb-0" id="itemsTable" style="background: transparent;">
-                            <thead class="text-muted small text-uppercase">
+                        <table class="table align-middle mb-0" id="itemsTable" >
+                            <thead class="table-light text-secondary small text-uppercase">
                                 <tr>
                                     <th style="min-width: 280px;">Produk Kamera <span class="text-danger">*</span></th>
                                     <th style="width: 140px;">Kuantitas (Qty) <span class="text-danger">*</span></th>
@@ -76,7 +76,7 @@
                             <tbody id="itemsBody">
                                 <tr class="item-row" data-index="0">
                                     <td>
-                                        <select name="items[0][product_id]" class="form-select bg-dark border-secondary text-light product-select" required>
+                                        <select name="items[0][product_id]" class="form-select border-secondary-subtle-subtle product-select" required>
                                             <option value="">-- Pilih Kamera / Aksesoris --</option>
                                             @foreach($products as $p)
                                                 <option value="{{ $p->id }}" data-purchase-price="{{ (int)$p->purchase_price }}">
@@ -86,10 +86,10 @@
                                         </select>
                                     </td>
                                     <td>
-                                        <input type="number" name="items[0][quantity]" class="form-control bg-dark border-secondary text-light text-center qty-input" min="1" value="1" required>
+                                        <input type="number" name="items[0][quantity]" class="form-control border-secondary-subtle-subtle text-center qty-input" min="1" value="1" required>
                                     </td>
                                     <td>
-                                        <input type="number" step="1000" name="items[0][unit_cost]" class="form-control bg-dark border-secondary text-light font-monospace price-input" min="0" placeholder="0" required>
+                                        <input type="number" step="1000" name="items[0][unit_cost]" class="form-control border-secondary-subtle-subtle font-monospace price-input" min="0" placeholder="0" required>
                                     </td>
                                     <td class="text-end fw-semibold font-monospace text-light subtotal-display">
                                         Rp 0
@@ -101,7 +101,7 @@
                                     </td>
                                 </tr>
                             </tbody>
-                            <tfoot style="border-top: 2px solid var(--cs-border);">
+                            <tfoot class="table-light">
                                 <tr>
                                     <td colspan="3" class="text-end fw-bold text-white fs-6">TOTAL KESELURUHAN:</td>
                                     <td class="text-end fw-bold text-success font-monospace fs-5" id="grandTotalDisplay">Rp 0</td>

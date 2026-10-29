@@ -13,11 +13,11 @@
     </a>
 </div>
 
-<div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+<div class="card border-0 shadow-sm" >
     <div class="card-body p-3">
         <div class="table-responsive">
-            <table class="table table-dark table-hover align-middle mb-0" style="background: transparent;">
-                <thead class="text-muted small text-uppercase" style="border-bottom: 2px solid var(--cs-border);">
+            <table class="table table-hover align-middle mb-0" >
+                <thead class="table-light text-secondary small text-uppercase">
                     <tr>
                         <th>No. Faktur</th>
                         <th>Tanggal Pesan</th>
@@ -29,7 +29,7 @@
                 </thead>
                 <tbody>
                     @forelse($sales as $sale)
-                    <tr style="border-bottom: 1px solid var(--cs-border);">
+                    <tr >
                         <td>
                             <span class="fw-semibold text-info font-monospace">{{ $sale->sale_number }}</span>
                         </td>

@@ -27,7 +27,7 @@
 <div class="row g-3">
     <!-- Header Details -->
     <div class="col-md-4">
-        <div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+        <div class="card border-0 shadow-sm" >
             <div class="card-body p-4">
                 <h5 class="fw-bold text-white mb-3">Informasi Transaksi</h5>
 
@@ -53,7 +53,7 @@
 
                 <div class="mb-3">
                     <span class="text-muted small d-block">Petugas Yang Menginput:</span>
-                    <span class="badge bg-dark border border-secondary text-info">
+                    <span class="badge bg-dark border border-secondary-subtle text-info">
                         <i class="bi bi-person-badge me-1"></i>{{ $purchase->user->name ?? '-' }} ({{ ucfirst($purchase->user->role ?? '-') }})
                     </span>
                 </div>
@@ -68,14 +68,14 @@
 
     <!-- Items Table -->
     <div class="col-md-8">
-        <div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+        <div class="card border-0 shadow-sm" >
             <div class="card-header bg-transparent border-0 pt-3">
                 <h5 class="fw-bold text-white mb-0"><i class="bi bi-box-seam me-2 text-primary"></i>Rincian Produk Kamera Yang Diterima</h5>
             </div>
             <div class="card-body p-3">
                 <div class="table-responsive">
-                    <table class="table table-dark table-hover align-middle mb-0" style="background: transparent;">
-                        <thead class="text-muted small text-uppercase">
+                    <table class="table table-hover align-middle mb-0" >
+                        <thead class="table-light text-secondary small text-uppercase">
                             <tr>
                                 <th>#</th>
                                 <th>Produk Kamera</th>
@@ -86,11 +86,11 @@
                         </thead>
                         <tbody>
                             @foreach($purchase->purchaseItems as $idx => $item)
-                            <tr style="border-bottom: 1px solid var(--cs-border);">
+                            <tr >
                                 <td class="text-muted">{{ $idx + 1 }}</td>
                                 <td>
                                     <div class="fw-semibold text-white">{{ $item->product->name ?? '-' }}</div>
-                                    <span class="badge bg-dark border border-secondary text-muted font-monospace small">{{ $item->product->sku ?? '-' }}</span>
+                                    <span class="badge bg-dark border border-secondary-subtle text-muted font-monospace small">{{ $item->product->sku ?? '-' }}</span>
                                 </td>
                                 <td class="text-center fw-bold text-primary font-monospace">+{{ $item->quantity }}</td>
                                 <td class="text-end font-monospace">Rp {{ number_format($item->unit_cost, 0, ',', '.') }}</td>
@@ -98,7 +98,7 @@
                             </tr>
                             @endforeach
                         </tbody>
-                        <tfoot style="border-top: 2px solid var(--cs-border);">
+                        <tfoot class="table-light">
                             <tr>
                                 <td colspan="4" class="text-end fw-bold text-white fs-6">TOTAL PEMBELIAN:</td>
                                 <td class="text-end fw-bold text-success font-monospace fs-5">{{ $purchase->formatted_total }}</td>

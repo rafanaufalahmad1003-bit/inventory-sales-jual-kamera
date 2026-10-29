@@ -10,20 +10,20 @@
             <a href="{{ route('categories.index') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i> Kembali</a>
         </div>
 
-        <div class="card border-0 shadow-sm" style="background: var(--cs-card-bg); border: 1px solid var(--cs-border);">
+        <div class="card border-0 shadow-sm" >
             <div class="card-body p-4">
                 <form action="{{ route('categories.store') }}" method="POST">
                     @csrf
 
                     <div class="mb-3">
                         <label class="form-label text-light fw-semibold">Nama Kategori <span class="text-danger">*</span></label>
-                        <input type="text" name="name" class="form-control bg-dark border-secondary text-light @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Contoh: Mirrorless Cameras" required>
+                        <input type="text" name="name" class="form-control border-secondary-subtle-subtle @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Contoh: Mirrorless Cameras" required>
                         @error('name') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                     </div>
 
                     <div class="mb-4">
                         <label class="form-label text-light fw-semibold">Deskripsi</label>
-                        <textarea name="description" rows="3" class="form-control bg-dark border-secondary text-light @error('description') is-invalid @enderror" placeholder="Keterangan singkat tentang kategori kamera ini...">{{ old('description') }}</textarea>
+                        <textarea name="description" rows="3" class="form-control border-secondary-subtle-subtle @error('description') is-invalid @enderror" placeholder="Keterangan singkat tentang kategori kamera ini...">{{ old('description') }}</textarea>
                         @error('description') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
                     </div>
 
